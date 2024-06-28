@@ -11,7 +11,7 @@ function Header() {
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
       >
-        <span className="px-2 py-1 bg-gradient-to-r from-pink-500 via-orange-500 to-red-500 rounded-lg text-white">
+        <span className="px-2 py-1 bg-gradient-to-r from-pink-500 to-red-500 rounded-lg text-white">
           TastyBites
         </span>
         Blog
@@ -32,7 +32,7 @@ function Header() {
           <FaMoon />
         </Button>
         <Link to="/sign-in">
-          <Button gradientDuoTone="pinkToRed" outline>
+          <Button gradientDuoTone='purpleToBlue' outline>
             Sign In
           </Button>
         </Link>
