@@ -36,8 +36,6 @@ export default function DashProfile() {
   const [formData, setFormData] = useState({});
   const filePickerRef = useRef();
   const dispatch = useDispatch();
-
-
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -52,7 +50,16 @@ export default function DashProfile() {
   }, [imageFile]);
 
   const uploadImage = async () => {
-    
+    // service firebase.storage {
+    //   match /b/{bucket}/o {
+    //     match /{allPaths=**} {
+    //       allow read;
+    //       allow write: if
+    //       request.resource.size < 2 * 1024 * 1024 &&
+    //       request.resource.contentType.matches('image/.*')
+    //     }
+    //   }
+    // }
     setImageFileUploading(true);
     setImageFileUploadError(null);
     const storage = getStorage(app);
@@ -284,7 +291,7 @@ export default function DashProfile() {
             </h3>
             <div className='flex justify-center gap-4'>
               <Button color='failure' onClick={handleDeleteUser}>
-                Yes, I&apos;m sure
+                Yes, I'm sure
               </Button>
               <Button color='gray' onClick={() => setShowModal(false)}>
                 No, cancel
